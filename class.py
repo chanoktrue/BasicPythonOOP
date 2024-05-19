@@ -17,5 +17,14 @@ class Employee:
         print("salary = ", format(self.salary))
         print("department :", self.department)
         
-staff1 = Employee("Mac", 10000, "Developer")
-staff1.showData()
+        
+class Programmer(Employee):
+    __departmentName = "Depatment Com"
+    def __init__(self, name, salary):
+        super().__init__(name, salary, self.__departmentName)
+     
+com = Programmer("roj", 1000)
+com.showData()
+
+
+
